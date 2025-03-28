@@ -1,1 +1,36 @@
-3 + 5 * 2
+Análisis y evaluación de estructuras con con Listener y Visitor
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+3 * 8
+5 / 7
+3 + 5 
+3 - 6
+5
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+grammar Expr;
+
+prog:   expr EOF ;
+
+expr:   expr op=('*'|'/') expr
+    |   expr op=('+'|'-') expr
+    |   INT
+    ;
+
+INT : [0-9]+ ;
+WS  : [ \t\r\n]+ -> skip ;
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+
+📦 1. Crear archivos de la gramatica
+    antlr4 -Dlanguage=Python3 -visitor -listener Expr.g4
+📦 3. Configurar archivo EvalVisitor.py y test_visitor.py
+📦 4.Ejecutar Patrones:
+
+⚙️ Para ejecutar el patron Visitor. test_visitor internamente llama a 
+   TreeVisitor.py para mostrar el recorrido
+    python3 test_visitor.py
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+🔡 Finalizada el desarro del ejercicio realizar un:
+git add .
+git commit -m "Subir cambios"
+git push
