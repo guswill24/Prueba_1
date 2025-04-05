@@ -28,7 +28,9 @@ WS  : [ \t\r\n]+ -> skip ;
 ⚙️ Para ejecutar el patron Visitor. test_visitor internamente llama a 
    TreeVisitor.py para mostrar el recorrido
     python3 test_visitor.py
-
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+5. Ejecutar python3 main.py  , este llama a TreeVisitor.py  
+Ingresar expresion: 2 + 3 * 4
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 🔡 Finalizada el desarro del ejercicio realizar un:
 git add .
